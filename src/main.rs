@@ -60,8 +60,8 @@ fn  nwallign(shortseq: &str, longseq: &str) -> i32 {
             }
             else if up > diag && up > left {
                 
-                trace1.insert(0, '-');
-                trace2.insert(0, bases2[coords[1]]);   
+                trace1.insert(0, bases1[coords[0]]);
+                trace2.insert(0, '-');   
                 //println!("up to {:?}", [bases1[coords[1]]]);
                 coords[0] -= 1;     
             }
@@ -82,8 +82,8 @@ fn  nwallign(shortseq: &str, longseq: &str) -> i32 {
     similarity_score
 }
 fn main() {
-    let read1 = "AGCTGCGTACTAACGTC";
-    let read2 = "ACTGACGCTTACGTC";
+    let read1 = "AGCTG";
+    let read2 = "ACTG";
 
     nwallign(read1, read2);
 
